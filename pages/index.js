@@ -1,9 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import SidebarLeft from '../src/components/SidebarLeft'
+import SidebarRight from '../src/components/SidebarRight'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
+    <>
+    <div className={styles.container1}>
+    <SidebarLeft/>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
@@ -13,7 +18,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <div className={styles.titleHeader}>opinionth</div>
         </h1>
 
         <p className={styles.description}>
@@ -65,5 +70,9 @@ export default function Home() {
         </a>
       </footer>
     </div>
+      <SidebarRight/>
+    </div>
+    </>
   )
+  
 }
